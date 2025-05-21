@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+      <link href="styleMain.css" rel="stylesheet">
+
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>Информация</title>
+      <script src="js/table.js"></script>
+      <script src="http://d3js.org/d3.v7.min.js"> </script>
+      <script src="js/data.js"></script>
+      <script src="js/filter.js"></script>
+      <script src="js/sort.js"></script>
+      <script src="js/chart.js"></script>
+      <style ></style>
+    </head>
+    <body>
+
+        
+        <a name="Stat"></a>
+        <p>
+          <a href="Main.html#main">Наши объекты</a><br>
+          <a href="TableStat.html#Stat"><strong>Информация о наших объектах</strong></a>
+        </p>
+      <hr>   
+
+        
+<details> 
+  <summary>График</summary>
+
+  <form>
+    Значение по оси OX <br>
+    <input type="radio" name="oxvalue" value="city" checked id="typeRadio">Тип<br>
+    <input type="radio" name="oxvalue" value="country" checked id="countryRadio">Страна<br>
+    <input type="radio" name="oxvalue" value="year" id="yearRadio">Год<br>
+    <div>
+      Значение по оси OY <br>
+      <input type="checkbox" name="oyvalue" id="chbMinBudget"> Показать минимальный бюджет <br>
+      <input type="checkbox" name="oyvalue" id="chbAvgBudget">Показать средний бюджет<br>
+      <input type="checkbox" name="oyvalue" id="chbMaxBudget"> Показать максимальный бюджет <br>
+    </div>
+    Тип графика <select id="selectTypeGraph">
+    <option value="0">Точечная</option>
+    <option value="1">Гистограмма</option>
+    <option value="2">График</option>
+  </select> <br>
+    <input type="button" value="Построить">
+    <h3 id="error"></h3>
+  </form>
+
+</details>
+
+
+<details> 
+  <summary>Фильтр</summary>
+
+  <form>
+    <p>
+      Название объекта: <input type="text" placeholder="Введите название" id="name">
+    </p>
+    <p>
+      Тип объекта: <input type="text" placeholder="Введите тип объекта" id="type">
+    </p>
+    <p>
+      Страна потройки: <input type="text" placeholder="Введите страну" id="country">
+    </p>
+    <p>
+      Год постройки: от <input type="number" min="2000" max="2025" placeholder="2000" id="yearFrom"> до <input type="number" min="2000" max="2025" placeholder="2025" id="yearTo">
+    </p>
+    <p>
+      Бюджет стройки: от <input type="number" min="300" max="5000" placeholder="300" id="budget_ot"> млн до <input type="number" min="300" max="5000" placeholder="2000" id="budget_do"> млн
+    </p>
+    <p>
+      Кол-во этажей: от <input type="number" min="10" max="100" placeholder="10" id="floors_ot"> до <input type="number" min="10" max="100" placeholder="100" id="floors_do">
+    </p>
+    <p>
+      Кол-во квартир: от <input type="number" min="100" max="500" placeholder="100" id="apartments_ot"> до <input type="number" min="100" max="500" placeholder="500" id="apartments_do">
+    </p>
+  </form>
+
+  <input type="button" value="Найти" id="Filterbutton">
+  <input type="button" value="Очистить" id="ClearFilter">
+  <p></p>
+
+</details>
+
+<details>
+<summary>Сортировка</summary>
+<form id="sort">
+  <p>
+    Первый уровень:
+    <select id="fieldsFirst">
+    </select>
+    По убыванию?<input type="checkbox" id="fieldsFirstDesc">
+  </p>
+  <p>
+    Второй уровень:
+    <select id="fieldsSecond">
+    </select>
+    По убыванию?<input type="checkbox" id="fieldsSecondDesc">
+  </p>
+  <p>
+    Третий уровень:
+    <select id="fieldsThird">
+    </select>
+    По убыванию?<input type="checkbox" id="fieldsThirdDesc">
+  </p>
+</form>
+<p><button id="btnSort">Отсортировать</button>
+  <button id="btnClearSort">Очистить</button></p>
+</details>
+
+        <svg></svg>
+
+<table border=1 id="table">
+</table>
+
+<script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+
+
+.menu {
+    display: block;
+    width: 100%;
+    background-image: url(images/head.jpg);
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2em;
+    height: 456px;
+    color: white;
+    word-spacing: 3em;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.menu a { 
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 38, 255);
+  }
+  
+#active {
+    color: rgb(101, 104, 255);
+}
+
+.menu p {
+    white-space: nowrap;
+    font-size: 2.5em;
+    margin: 250px;
+}
+
+.down {
+    overflow: hidden;
+    margin: 2% 4%
+}
+
+.L {
+    display: block;
+    width: 49%;
+    float: left;
+    overflow: hidden;
+    clear:both;
+    font-size: 1.5vw;
+}
+
+.R {
+    width: 49%;
+    float: right;
+    overflow: hidden;
+    font-size: 1vw;
+}
+
+.Limg {
+    width: 49%;
+    height: 1430px;
+    display: inline;
+    vertical-align: top;
+    float: left;
+}
+
+.Ltext {
+    width: 49%;
+    display: inline;
+    float: right;
+    vertical-align:top;
+    text-align: justify;
+}
+
+.Rblock {
+    display: block;
+    overflow: hidden;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.Rblock_in {
+    overflow: hidden;
+}
+
+.Rblock_img {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Rblock_head {
+    width: 55%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 4%;
+}
+
+.Rblock_text {
+    display: inline;
+    text-align: justify;
+    vertical-align: bottom;
+    font-size: larger;
+}
+
+.fio {
+    vertical-align: 75%;
+    font-size: 25px;
+    float: left;
+    white-space: nowrap;
+}
+        
+.mail {
+    display: inline-block;
+    height: 100px;
+    width: 100%;   
+}
+  
+.contacts {
+    font-size:25px;
+    vertical-align: 75%;
+    float: right;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: black;
+}
+
+.contacts a:hover {
+    color: rgb(0, 38, 255);
+}
+
+svg {
+    width: 0px;
+    height: 0px;
+}
+svg text {
+    font: 8px Verdana;
+}
+svg path, line {
+    fill: none;
+    stroke: #333333;
+    width: 1px;
+}
+
+#error {
+    color: red;
+}
